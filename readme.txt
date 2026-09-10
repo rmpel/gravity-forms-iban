@@ -1,8 +1,9 @@
 === Gravity Forms IBAN ===
 Contributors: admium-webdevelopment, slimndap
 Tags: iban, sepa
-Requires at least: 3.8
-Tested up to: 4.2
+Requires at least: 4.9
+Tested up to: 6.9
+Requires PHP: 7.4
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +23,12 @@ This plugin uses the [php-iban](https://github.com/globalcitizen/php-iban) libra
 2. An IBAN input field in the front end.
 
 == Changelog ==
+
+= 1.1 =
+* Compatibility with Gravity Forms 3.0: the IBAN mask is now registered as a regular standard mask instead of relying on the deprecated `gform_input_mask_script` filter (removed in Gravity Forms 3.0). Forms saved with version 1.0 are migrated on the fly.
+* Validation now uses the per-field `gform_field_validation` filter instead of `gform_validation`.
+* The validation message now reads "Please enter a valid IBAN." and is filterable via `gform_iban_validation_message`.
+* Updated the bundled php-iban library to the current upstream version (116 country registry, PHP 8 compatible).
 
 = 1.0 =
 * First public version of the plugin.
