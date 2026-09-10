@@ -1,5 +1,5 @@
 === Gravity Forms IBAN ===
-Contributors: admium-webdevelopment, slimndap
+Contributors: rmpel, admium-webdevelopment, slimndap
 Tags: iban, sepa
 Requires at least: 4.9
 Tested up to: 6.9

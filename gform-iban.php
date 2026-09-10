@@ -3,10 +3,9 @@
  * Plugin Name: Gravity Forms IBAN
  * Plugin URI: https://wordpress.org/plugins/gravity-forms-iban/
  * Description: Adds an IBAN mask and IBAN validation to Gravity Forms.
- * Author: Admium and Jeroen Schmit, Slim & Dapper
+ * Author: Remon Pel, Admium and Jeroen Schmit, Slim & Dapper
  * Version: 1.1
- * Author URI: www.admium.nl
- * GitHub Plugin URI: AdmiumNL/adm-gravity-iban
+ * Author URI: remonpel.nl
  *
  * @package Gravity_Forms_IBAN
  */
