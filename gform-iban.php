@@ -4,7 +4,7 @@
  * Plugin URI: https://wordpress.org/plugins/gravity-forms-iban/
  * Description: Adds an IBAN mask and IBAN validation to Gravity Forms.
  * Author: Remon Pel, Admium and Jeroen Schmit, Slim & Dapper
- * Version: 1.1
+ * Version: 1.1.1
  * Author URI: remonpel.nl
  * Text Domain: gravity-forms-iban
  * Domain Path: /languages
@@ -36,7 +36,7 @@ define( 'GFORM_IBAN_LEGACY_MASK_VALUE', 'iban' );
 /**
  * Loads the plugin translations bundled in the /languages directory.
  *
- * @since 1.1
+ * @since 1.1.1
  * @return void
  */
 function gform_iban_load_textdomain() {
