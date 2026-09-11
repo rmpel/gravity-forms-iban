@@ -6,6 +6,8 @@
  * Author: Remon Pel, Admium and Jeroen Schmit, Slim & Dapper
  * Version: 1.1
  * Author URI: remonpel.nl
+ * Text Domain: gravity-forms-iban
+ * Domain Path: /languages
  *
  * @package Gravity_Forms_IBAN
  */
@@ -30,6 +32,17 @@ define( 'GFORM_IBAN_MASK', 'aa99 ?**** **** **** **** **** **** **** ****' );
  * into the real mask. Forms saved with 1.0 still carry it.
  */
 define( 'GFORM_IBAN_LEGACY_MASK_VALUE', 'iban' );
+
+/**
+ * Loads the plugin translations bundled in the /languages directory.
+ *
+ * @since 1.1
+ * @return void
+ */
+function gform_iban_load_textdomain() {
+	load_plugin_textdomain( 'gravity-forms-iban', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+add_action( 'init', 'gform_iban_load_textdomain' );
 
 /**
  * Adds the IBAN mask to the built-in input masks that are displayed in the Text Field input mask setting.
@@ -128,7 +141,12 @@ function gform_iban_set_placeholder( $form ) {
 			 * @param string   $placeholder The example placeholder.
 			 * @param GF_Field $field       The field being rendered.
 			 */
-			$field->placeholder = apply_filters( 'gform_iban_placeholder', 'NL00 BANK 0123 4567 89', $field );
+			$field->placeholder = apply_filters(
+				'gform_iban_placeholder',
+				/* translators: Example IBAN shown as input placeholder; localize to an example IBAN of your country. */
+				__( 'NL00 BANK 0123 4567 89', 'gravity-forms-iban' ),
+				$field
+			);
 		}
 	}
 	return $form;
